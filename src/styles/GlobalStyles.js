@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     button {
+      display: inline-block;
       cursor: pointer;
     }
 
