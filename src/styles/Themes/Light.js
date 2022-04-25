@@ -1,6 +1,6 @@
 const Light = {
   colors: {
-    LightColor: '#ffffff',
+    fontColor: '#ffffff',
   }
 }
 
