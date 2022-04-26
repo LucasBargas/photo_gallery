@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Container from '../../../styles/Container';
 import * as S from './FilterSection.styles';
 
-const FilterSection = () => {
-  const [checked, setChecked] = useState(['Todos']);
-
+const FilterSection = ({ checked, setChecked }) => {
   const handleCheckedChange = ({ target }) => {
     target.checked ? setChecked([...checked, target.value]) : setChecked(checked.filter(item => item !== target.value));
   }
-
-  if (checked.length) console.log(checked);
 
   return (
     <S.FilterSectionContainer>
