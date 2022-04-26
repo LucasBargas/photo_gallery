@@ -16,7 +16,7 @@ export const ToggleButtonArea = styled.div`
 
 export const ToggleButton = styled.div`
   background: red;
-  width: 35px;
+  width: 32px;
   height: 15px;
   border-radius: 20px;
   cursor: pointer;

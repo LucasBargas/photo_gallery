@@ -14,10 +14,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    font-family: ${({ theme }) => theme.fonts.OpenSans};
     background: ${({ theme }) => theme.colors.PrimaryColor};
+
     button, input {
       outline: none;
       border: none;
+      font-family: ${({ theme }) => theme.fonts.OpenSans};
     }
 
     button {

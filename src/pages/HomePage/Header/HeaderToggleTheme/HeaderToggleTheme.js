@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from './HeaderToggleTheme.styles';
 
 const HeaderToggleTheme = ({ setIsDark, isDark }) => {
