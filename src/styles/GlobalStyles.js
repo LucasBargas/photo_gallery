@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    background: ${({ theme }) => theme.colors.PrimaryColor};
     button, input {
       outline: none;
       border: none;

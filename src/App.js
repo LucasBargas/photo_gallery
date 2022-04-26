@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={isDark ? Dark : Light}>
-      <HomePage />
+      <HomePage setIsDark={setIsDark} isDark={isDark} />
       <GlobalStyles />
     </ThemeProvider>
   )

@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from './Header/Header';
 
-const HomePage = () => {
+const HomePage = ({ setIsDark, isDark }) => {
   return (
-    <div>HomePage</div>
+    <>
+      <Header setIsDark={setIsDark} isDark={isDark} />
+    </>
   )
 }
 

@@ -1,6 +1,7 @@
 const Dark = {
   colors: {
-    fontColor: '#ffffff',
+    PrimaryColor: '#000000',
+    FontColor: '#ffffff',
   }
 }
 
