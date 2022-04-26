@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  padding: 1rem 0;
-  background: #ccc;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid black;
 `;
 
 export const HeaderContent = styled.div`

@@ -16,8 +16,8 @@ export const ToggleButtonArea = styled.div`
 
 export const ToggleButton = styled.div`
   background: red;
-  width: 32px;
-  height: 15px;
+  width: 40px;
+  height: 20px;
   border-radius: 20px;
   cursor: pointer;
   margin: 0 .25rem;
@@ -26,8 +26,8 @@ export const ToggleButton = styled.div`
   &::after {
     content: '';
     background: white;
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     position: absolute;
 
