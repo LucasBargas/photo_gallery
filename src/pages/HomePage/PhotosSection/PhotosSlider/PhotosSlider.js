@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Container from '../../../../styles/Container';
 import * as S from './PhotosSlider.styles';
 
-const PhotosSlider = ({ active, setActive, photosFilter }) => {
+const PhotosSlider = ({ active, setActive, photosFilter, setSlider }) => {
   const [position, setPosition] = useState(0);
   const slideRef = useRef();
 
@@ -38,8 +38,12 @@ const PhotosSlider = ({ active, setActive, photosFilter }) => {
     }
   }
 
+  const handleOutsideClick = ({ target, currentTarget }) => {
+    if (target === currentTarget) setSlider(null);
+  }
+
   return (
-    <S.PhotosSliderContainer>
+    <S.PhotosSliderContainer onClick={handleOutsideClick}>
       <Container>
         <S.PhotosSliderArea>
           <S.PhotosSliderContent
@@ -52,9 +56,11 @@ const PhotosSlider = ({ active, setActive, photosFilter }) => {
               </figure>
             ))}
           </S.PhotosSliderContent>
-
-          <button onClick={slidePrev}>Anterior</button>
-          <button onClick={slideNext}>Próximo</button>
+            
+          <S.SliderController>
+            <button id='slidePrev' onClick={slidePrev}>Anterior</button>
+            <button id='slideNext' onClick={slideNext}>Próximo</button>
+          </S.SliderController>
         </S.PhotosSliderArea>
       </Container>
     </S.PhotosSliderContainer>

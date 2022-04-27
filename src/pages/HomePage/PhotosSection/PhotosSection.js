@@ -31,7 +31,7 @@ const PhotosSection = ({ searchValue, checked }) => {
           </S.PhotosArea>
         </Container>
         {slider && (
-          <PhotosSlider active={active} setActive={setActive} photosFilter={photosFilter} />
+          <PhotosSlider active={active} setActive={setActive} photosFilter={photosFilter} setSlider={setSlider} />
         )}
       </S.PhotosSectionContainer>
     )

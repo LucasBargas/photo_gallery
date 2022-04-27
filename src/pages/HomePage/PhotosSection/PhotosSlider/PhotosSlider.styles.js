@@ -1,4 +1,11 @@
 import styled from 'styled-components';
+import { keyframes } from 'styled-components';
+
+const animationSlider = keyframes`
+  to {
+    opacity: 1;
+  }
+`;
 
 export const PhotosSliderContainer = styled.div`
   display: flex;
@@ -8,15 +15,25 @@ export const PhotosSliderContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 500;
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, .9);
+  opacity: 0;
+  animation: ${animationSlider} .4s forwards;
 `;
 
 export const PhotosSliderArea = styled.div`
-  max-width: 80%;
   margin: 0 auto;
   overflow: hidden;
+
+  @media (max-width: 1536px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 1366px) {
+    max-width: 76%;
+  }
 `;
 
 export const PhotosSliderContent = styled.div`
@@ -34,3 +51,25 @@ export const PhotosSliderContent = styled.div`
     }
   }
 `;
+
+export const SliderController = styled.div`
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 600;
+  width: 100%;
+
+  button {
+    position: relative;
+
+    &#slidePrev {
+      left: -50px;
+    }
+
+    &#slideNext {
+      right: -50px;
+    }
+  }
+`; 
