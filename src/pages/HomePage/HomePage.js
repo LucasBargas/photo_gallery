@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import FilterSection from './FilterSection/FilterSection';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
-import HomePageContainer  from './PhotosSection/HomePage.styles';
+import HomePageContainer  from './HomePage.styles';
 import PhotosSection from './PhotosSection/PhotosSection';
 
 const HomePage = ({ setIsDark, isDark }) => {
@@ -17,6 +17,7 @@ const HomePage = ({ setIsDark, isDark }) => {
         searchValue={searchValue} 
         setSearchValue={setSearchValue} 
       />
+      
       <main>
         <FilterSection checked={checked} setChecked={setChecked} />
         <PhotosSection

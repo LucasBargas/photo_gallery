@@ -43,7 +43,7 @@ const PhotosSection = ({ searchValue, checked }) => {
     return (
       <S.ErrorFilter>
         <Container>
-          <p>Você precisa filtrar a categoria de fotos desejada ou pesquisar por uma.</p>
+          <p>Você precisa <strong>filtrar</strong> a categoria de fotos desejada ou <strong>pesquisar</strong> por uma.</p>
         </Container>
       </S.ErrorFilter>
     )
