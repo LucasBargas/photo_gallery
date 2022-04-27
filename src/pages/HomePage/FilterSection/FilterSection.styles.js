@@ -11,6 +11,7 @@ export const FilterSectionContainer = styled.section`
 
 export const FilterArea = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: .75rem;
   padding-top: .5rem;
 

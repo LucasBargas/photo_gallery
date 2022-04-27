@@ -83,13 +83,13 @@ const FilterSection = ({ checked, setChecked }) => {
           </label>
         </S.FilterArea>
 
-        <S.ClearFilter>
-          {checked.length > 0 && (
+        {checked.length > 0 && (
+          <S.ClearFilter>
             <span onClick={() => setChecked([])}>
               <strong>Limpar filtro</strong>
             </span>
-          )}
-        </S.ClearFilter>
+          </S.ClearFilter>
+        )}
       </Container>
     </S.FilterSectionContainer>
   )

@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 export const PhotosSectionContainer = styled.section`
   padding: 1.5rem 0;
+
+  @media (max-width: 480px) {
+    padding: 2.5rem 0;
+  }
 `;
 
 export const PhotosArea = styled.div`
@@ -9,6 +13,13 @@ export const PhotosArea = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: .75rem;
   
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const PhotoCard = styled.figure`
