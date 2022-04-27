@@ -11,7 +11,7 @@ const PhotosSection = ({ searchValue, checked }) => {
   const handlePhotoClick = ({ target }) => {
     const i = Number(target.closest('figure').id);
     setActive(i);
-    setSlider(true)
+    setSlider(true);
   }
 
   const photosFilter = photos.filter(({ category, defaultCategory }) => {
