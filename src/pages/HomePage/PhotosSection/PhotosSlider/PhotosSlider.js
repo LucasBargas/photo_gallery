@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Container from '../../../../styles/Container';
 import * as S from './PhotosSlider.styles';
 
@@ -19,7 +19,7 @@ const PhotosSlider = ({ active, setActive, photosFilter, setSlider }) => {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [active])
+  }, [active]);
 
   const slidePrev = () => {
     if (active > 0) {
@@ -68,4 +68,3 @@ const PhotosSlider = ({ active, setActive, photosFilter, setSlider }) => {
 }
 
 export default PhotosSlider;
-
