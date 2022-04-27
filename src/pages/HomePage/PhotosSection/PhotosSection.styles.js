@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PhotosSectionContainer = styled.section`
-  padding: 1.5rem 0;
+  padding: 2.25rem 0;
 
   @media (max-width: 480px) {
     padding: 2.5rem 0;

@@ -6,6 +6,7 @@ const Dark = {
     InputColor: '#444444',
     DarkIcon: '#444444',
     BorderColor: '#30363D',
+    FooterColor: '#161b21',
   },
 
   fonts: {

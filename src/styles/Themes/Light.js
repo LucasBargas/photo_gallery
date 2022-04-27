@@ -1,11 +1,12 @@
 const Light = {
   colors: {
     PrimaryColor: '#ffffff',
-    ToggleColor: '#ffffff',
     FontColor: '#444444',
     InputColor: '#444444',
     DarkIcon: '#444444',
     BorderColor: '#30363D',
+    ToggleColor: '#ffffff',
+    FooterColor: '#f1efef',
   },
 
   fonts: {
