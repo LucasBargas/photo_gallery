@@ -32,7 +32,6 @@ const PhotosSlider = ({ active, setActive, photosFilter, setSlider }) => {
   const slideNext = () => {
     if (active < photosFilter.length - 1) {
       setActive(active + 1);
-
     } else if (active === photosFilter.length - 1) {
       setActive(0);
     }

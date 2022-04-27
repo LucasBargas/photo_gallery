@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import * as S from './PhotosSection.styles';
 import Container from '../../../styles/Container';
 import photos from './photos';
