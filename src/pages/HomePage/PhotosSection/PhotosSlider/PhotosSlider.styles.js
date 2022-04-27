@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import { keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const animationSlider = keyframes`
   to {
@@ -44,10 +43,11 @@ export const PhotosSliderContent = styled.div`
   figure {
     flex-shrink: 0;
     width: 100%;
-    padding: 0 1.5rem;
+    padding: 0 .5rem;
 
     img {
       width: 100%;
+      border-radius: 4px;
     }
   }
 `;
@@ -65,11 +65,11 @@ export const SliderController = styled.div`
     position: relative;
 
     &#slidePrev {
-      left: -50px;
+      left: -90px;
     }
 
     &#slideNext {
-      right: -50px;
+      right: -90px;
     }
   }
 `; 

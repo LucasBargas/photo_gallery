@@ -10,11 +10,12 @@ export const PhotosSectionContainer = styled.section`
 
 export const PhotosArea = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: .75rem;
   
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 480px) {
@@ -24,6 +25,7 @@ export const PhotosArea = styled.div`
 
 export const PhotoCard = styled.figure`
   overflow: hidden;
+  border-radius: 4px;
 
   img {
     display: block;
