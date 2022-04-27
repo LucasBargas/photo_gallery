@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 export const FilterSectionContainer = styled.section`
   padding: 1rem 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.BorderColor};
 
   h2 {
     font-size: 1.125rem;
+    font-weight: 600;
   }
 `;
 
@@ -13,7 +14,7 @@ export const FilterArea = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: .75rem;
-  padding-top: .5rem;
+  padding: .75rem 0;
 
   label, input {
     display: inline-block;
@@ -32,8 +33,6 @@ export const FilterArea = styled.div`
 `;
 
 export const ClearFilter = styled.div`
-  padding-top: .25rem;
-
   span {
     display: inline-block;
     cursor: pointer;

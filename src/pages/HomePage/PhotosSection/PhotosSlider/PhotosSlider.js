@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import Container from '../../../../styles/Container';
 import * as S from './PhotosSlider.styles';
+import { AiOutlineExpandAlt } from 'react-icons/ai';
+import { IoClose } from 'react-icons/io5';
+import { FaChevronLeft } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
 
 const PhotosSlider = ({ active, setActive, photosFilter, setSlider }) => {
   const [position, setPosition] = useState(0);
@@ -41,6 +45,31 @@ const PhotosSlider = ({ active, setActive, photosFilter, setSlider }) => {
     if (target === currentTarget) setSlider(null);
   }
 
+  const handleExpand = () => {
+    if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      } else if (document.documentElement.msRequestFullscreen) {
+        document.documentElement.msRequestFullscreen();
+      } else if (document.documentElement.mozRequestFullScreen) {
+        document.documentElement.mozRequestFullScreen();
+      } else if (document.documentElement.webkitRequestFullscreen) {
+        document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+      }
+
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+  }
+
   return (
     <S.PhotosSliderContainer onClick={handleOutsideClick}>
       <Container>
@@ -57,11 +86,20 @@ const PhotosSlider = ({ active, setActive, photosFilter, setSlider }) => {
           </S.PhotosSliderContent>
             
           <S.SliderController>
-            <button id='slidePrev' onClick={slidePrev}>Anterior</button>
-            <button id='slideNext' onClick={slideNext}>Próximo</button>
+            <button id='slidePrev' onClick={slidePrev}>
+              <FaChevronLeft />
+            </button>
+            <button id='slideNext' onClick={slideNext}>
+              <FaChevronRight />
+            </button>
           </S.SliderController>
         </S.PhotosSliderArea>
       </Container>
+
+      <S.PhotosSliderButtons>
+        <button onClick={handleExpand}><AiOutlineExpandAlt /></button>
+        <button onClick={() => setSlider(null)}><IoClose /></button>
+      </S.PhotosSliderButtons>
     </S.PhotosSliderContainer>
   )
 }

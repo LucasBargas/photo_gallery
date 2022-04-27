@@ -16,16 +16,23 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${({ theme }) => theme.fonts.OpenSans};
     background: ${({ theme }) => theme.colors.PrimaryColor};
+    color: ${({ theme }) => theme.colors.FontColor};
 
     button, input {
       outline: none;
-      border: none;
       font-family: ${({ theme }) => theme.fonts.OpenSans};
+      color: ${({ theme }) => theme.colors.FontColor};
     }
 
     button {
+      border: none;
       display: inline-block;
       cursor: pointer;
+    }
+
+    input {
+      border: 1px solid ${({ theme }) => theme.colors.BorderColor};
+      color: ${({ theme }) => theme.colors.InputColor};
     }
 
     ul, li {

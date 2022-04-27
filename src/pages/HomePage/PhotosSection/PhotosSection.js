@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as S from './PhotosSection.styles';
 import Container from '../../../styles/Container';
 import photos from './photos';
@@ -7,6 +7,10 @@ import PhotosSlider from './PhotosSlider/PhotosSlider';
 const PhotosSection = ({ searchValue, checked }) => {
   const [active, setActive] = useState(0);
   const [slider, setSlider] = useState(null);
+
+  useEffect(() => {
+    document.body.style.overflow = slider ? 'hidden' : 'auto';
+  }, [slider]);
 
   const handlePhotoClick = ({ target }) => {
     const i = Number(target.closest('figure').id);

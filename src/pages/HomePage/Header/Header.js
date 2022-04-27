@@ -8,6 +8,7 @@ const Header = ({ setIsDark, isDark, searchValue, setSearchValue }) => {
     <S.HeaderContainer>
       <Container>
         <S.HeaderContent>
+          <h1>Galeria de Fotos</h1>
           <HeaderToggleTheme setIsDark={setIsDark} isDark={isDark} />
           <HeaderSearchPhotos searchValue={searchValue} setSearchValue={setSearchValue} />
         </S.HeaderContent>
