@@ -25,8 +25,8 @@ const PhotosSection = ({ searchValue, checked }) => {
           </S.PhotosArea>
         </Container>
       </S.PhotosSectionContainer>
-      
     )
+    
   } else {
     return (
       <S.ErrorFilter>
