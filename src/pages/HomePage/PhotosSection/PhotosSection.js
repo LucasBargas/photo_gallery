@@ -8,8 +8,6 @@ const PhotosSection = ({ searchValue, checked }) => {
   const [active, setActive] = useState(0);
   const [slider, setSlider] = useState(null);
 
-  console.log(checked)
-
   useEffect(() => {
     document.body.style.overflow = slider ? 'hidden' : 'auto';
   }, [slider]);
@@ -21,7 +19,12 @@ const PhotosSection = ({ searchValue, checked }) => {
   }
 
   const photosFilter = photos.filter(({ category, defaultCategory }) => {
-    return checked.length ? category.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) && (checked.includes(category) || checked.includes(defaultCategory)) : searchValue.length && category.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()); 
+    return (
+      checked.length ? 
+      category.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) && (checked.includes(category) || checked.includes(defaultCategory)) 
+      : 
+      searchValue.length && (category.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) || defaultCategory.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()))
+    );
   })
 
   if (searchValue.length || checked.length > 0 ) {
