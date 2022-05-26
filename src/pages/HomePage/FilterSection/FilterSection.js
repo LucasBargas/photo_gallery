@@ -4,7 +4,7 @@ import * as S from './FilterSection.styles';
 
 const FilterSection = ({ checked, setChecked }) => {
   const handleCheckedChange = ({ target }) => {
-    target.checked ? setChecked([target.value, ...checked]) : setChecked(checked.filter(item => item !== target.value));
+    target.checked ? setChecked([...checked, target.value]) : setChecked(checked.filter(item => item !== target.value));
   }
 
   return (
