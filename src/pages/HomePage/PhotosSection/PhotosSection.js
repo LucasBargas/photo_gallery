@@ -6,7 +6,7 @@ import PhotosSlider from './PhotosSlider/PhotosSlider';
 
 const PhotosSection = ({ searchValue, checked }) => {
   const [active, setActive] = useState(0);
-  const [slider, setSlider] = useState(true);
+  const [slider, setSlider] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = slider ? 'hidden' : 'auto';
