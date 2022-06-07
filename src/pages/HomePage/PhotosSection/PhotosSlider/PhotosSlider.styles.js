@@ -1,10 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-
-const animationSlider = keyframes`
-  to {
-    opacity: 1;
-  }
-`;
+import styled from 'styled-components';
 
 export const PhotosSliderContainer = styled.div`
   display: flex;
@@ -18,8 +12,9 @@ export const PhotosSliderContainer = styled.div`
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, .9);
-  opacity: 0;
-  animation: ${animationSlider} .4s forwards;
+  opacity: ${({ slider }) => (slider ? '1' : '0')};
+  pointer-events: ${({ slider }) => (slider ? 'all' : 'none')};
+  transition: .4s;
 `;
 
 export const PhotosSliderArea = styled.div`

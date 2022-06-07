@@ -6,7 +6,7 @@ import PhotosSlider from './PhotosSlider/PhotosSlider';
 
 const PhotosSection = ({ searchValue, checked }) => {
   const [active, setActive] = useState(0);
-  const [slider, setSlider] = useState(null);
+  const [slider, setSlider] = useState(true);
 
   useEffect(() => {
     document.body.style.overflow = slider ? 'hidden' : 'auto';
@@ -27,7 +27,7 @@ const PhotosSection = ({ searchValue, checked }) => {
     );
   })
 
-  if (searchValue.length || checked.length > 0 ) {
+  if (searchValue.length > 0 || checked.length > 0 ) {
     return (
       <S.PhotosSectionContainer>
         <Container>
@@ -39,12 +39,12 @@ const PhotosSection = ({ searchValue, checked }) => {
             ))}
           </S.PhotosArea>
         </Container>
-        {slider && (
-          <PhotosSlider active={active} setActive={setActive} photosFilter={photosFilter} setSlider={setSlider} />
-        )}
+        <PhotosSlider active={active} setActive={setActive} photosFilter={photosFilter} slider={slider} setSlider={setSlider} />
       </S.PhotosSectionContainer>
     )
-  } else {
+  } 
+  
+  if (searchValue.length === 0 || checked.length === 0 ) {
     return (
       <S.ErrorFilter>
         <Container>
@@ -53,8 +53,6 @@ const PhotosSection = ({ searchValue, checked }) => {
       </S.ErrorFilter>
     )
   }
-
-  
 }
 
 export default PhotosSection;

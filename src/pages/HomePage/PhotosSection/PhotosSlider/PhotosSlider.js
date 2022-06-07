@@ -6,7 +6,7 @@ import { IoClose } from 'react-icons/io5';
 import { FaChevronLeft } from 'react-icons/fa';
 import { FaChevronRight } from 'react-icons/fa';
 
-const PhotosSlider = ({ active, setActive, photosFilter, setSlider }) => {
+const PhotosSlider = ({ active, setActive, photosFilter, slider, setSlider }) => {
   const [position, setPosition] = useState(0);
   const slideRef = useRef();
 
@@ -42,7 +42,7 @@ const PhotosSlider = ({ active, setActive, photosFilter, setSlider }) => {
   }
 
   const handleOutsideClick = ({ target, currentTarget }) => {
-    if (target === currentTarget) setSlider(null);
+    if (target === currentTarget) setSlider(false);
   }
 
   const handleExpand = () => {
@@ -71,7 +71,7 @@ const PhotosSlider = ({ active, setActive, photosFilter, setSlider }) => {
   }
 
   return (
-    <S.PhotosSliderContainer onClick={handleOutsideClick}>
+    <S.PhotosSliderContainer slider={slider} onClick={handleOutsideClick}>
       <Container>
         <S.PhotosSliderArea>
           <S.PhotosSliderContent
@@ -98,7 +98,7 @@ const PhotosSlider = ({ active, setActive, photosFilter, setSlider }) => {
 
       <S.PhotosSliderButtons>
         <button onClick={handleExpand}><AiOutlineExpandAlt /></button>
-        <button onClick={() => setSlider(null)}><IoClose /></button>
+        <button onClick={() => setSlider(false)}><IoClose /></button>
       </S.PhotosSliderButtons>
     </S.PhotosSliderContainer>
   )
