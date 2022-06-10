@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://galeriadefotos.projetoslucasbargas.com/>
+<https://galeriadefotos-lucasbargas.vercel.app/>
 
 ### Por que desenvolvi esta aplicação
 Desenvolvi esta galeria para praticar um sistema de filtro que funciona tanto ao pesquisar em um input, como também, ao selecionar categorias em checkboxes.
